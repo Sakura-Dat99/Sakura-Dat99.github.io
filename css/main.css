@@ -1385,7 +1385,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ffff90;
+    background: #b9ffff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3463,4 +3463,170 @@ header.header {
 .season-card[href=""] {
   pointer-events: none;
   cursor: not-allowed; /* 鼠标变成禁止符号 */
+}
+/* 手机端适配 (屏幕宽度小于 768px 时生效) */
+@media screen and (max-width: 768px) {
+  .yuc-container {
+    flex-direction: column !important;
+    padding: 10px !important;
+  }
+  .yuc-year {
+    border-right: none !important;
+    border-bottom: 3px solid #ff6b6b;
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    min-width: auto !important;
+    width: 100% !important; /* 让年份横跨 */
+  }
+  .yuc-seasons {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    width: 100% !important;
+  }
+  .season-card {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
+  .season-card img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 2/3 !important; /* 强制比例防变形 */
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+  .season-label,
+  .season-tag {
+/* 1. 强制铺满图片下方宽度 */
+    width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box !important;
+/* 2. 彻底居中 */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+/* 3. 消除偏移 */
+    margin: 0 !important;
+    position: static !important;
+    float: none !important;
+/* 4. 样式修正 */
+    padding: 6px 0 !important;
+    font-size: 11px !important;
+    border-radius: 0 0 4px 4px !important; /* 底部圆角 */
+  }
+  .season-title,
+  .season-card span {
+    font-size: 13px !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 8px 5px !important;
+    margin-top: 5px !important;
+  }
+  .post-body {
+    display: block !important; /* 强制取消可能的 flex 布局 */
+  }
+  .post-body img {
+    display: block !important;
+    margin: 0 auto 20px !important; /* 图片居中并留出底部间距 */
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .post-body > div,
+  .post-body > p {
+    width: 100% !important;
+    float: none !important; /* 取消浮动 */
+    position: static !important; /* 取消绝对定位 */
+  }
+  .bd-volume-list,
+  .post-body table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto; /* 如果表格实在太宽，允许横向滚动 */
+  }
+  .post-body table tr {
+    display: flex !important;
+    flex-direction: column !important; /* 表格行转为列 */
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+  }
+  .custom-tag {
+    width: auto !important;
+    display: inline-block !important;
+    margin: 5px 0 !important;
+    padding: 2px 10px !important;
+  }
+  .post-title {
+    font-size: 20px !important;
+    text-align: center;
+  }
+  post-body *,
+  .post-body div,
+  .post-body table,
+  .post-body span {
+    width: auto !important;
+    max-width: 100% !important;
+    float: none !important;
+    position: static !important; /* 强制拉回重叠的文字 */
+    display: block !important; /* 让重叠的东西变成上下排队 */
+    height: auto !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  .post-body img {
+    display: block !important;
+    margin: 10px auto !important;
+    width: 150px !important; /* 手机上卷数封面不要太大 */
+  }
+  .post-body {
+    line-height: 1.6 !important;
+    word-break: break-all !important; /* 防止长字母撑破屏幕 */
+  }
+  .release-cards-viewport {
+    overflow-x: visible !important; /* 允许纵向撑开 */
+    display: block !important;
+  }
+  .release-cards-container {
+    display: flex !important;
+    flex-direction: column !important; /* 强制卡片一卷一卷上下排队 */
+    align-items: center !important; /* 确保每一卷都在手机屏幕正中间 */
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 允许自然换行 */
+    gap: 30px !important; /* 增加每一卷之间的垂直间距 */
+  }
+  .release-card {
+    width: 100% !important; /* 占用全宽以便文字对齐 */
+    flex-shrink: 1 !important; /* 允许缩小 */
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* 核心：确保图片和文字在卡片内中心对齐 */
+  }
+  .scroll-btn {
+    display: none !important;
+  }
+  .release-info-list {
+    width: 100% !important;
+    text-align: center !important; /* 手机端居中通常比左对齐更好看 */
+    padding: 0 20px !important;
+    box-sizing: border-box;
+  }
+  .release-cards-container .release-card a.release-title {
+    width: 200px !important; /* 稍微拉长标题红线，配合手机宽度 */
+    margin: 15px auto !important;
+  }
+  .release-cards-container .release-card a.release-title[href="#"] {
+    pointer-events: none !important; /* 彻底禁用点击，防止回顶 */
+    cursor: default !important;
+    -webkit-tap-highlight-color: transparent !important; /* 移除手机点击时的蓝色高亮 */
+  }
+  .release-card a[href="#"] {
+    pointer-events: none !important;
+  }
 }

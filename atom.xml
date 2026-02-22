@@ -4,10 +4,10 @@
     <name>Sakura Chan</name>
   </author>
   <generator uri="https://hexo.io/">Hexo</generator>
-  <icon>http://example.com/favicon.ico</icon>
-  <id>http://example.com/</id>
-  <link href="http://example.com/" rel="alternate"/>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <icon>https://www.animebluray.wiki/favicon.ico</icon>
+  <id>https://www.animebluray.wiki/</id>
+  <link href="https://www.animebluray.wiki/" rel="alternate"/>
+  <link href="https://www.animebluray.wiki/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, Sakura Chan</rights>
   <subtitle>Anime Blu-ray List</subtitle>
   <title>圆盘档案</title>
@@ -16,8 +16,8 @@
     <author>
       <name>Sakura Chan</name>
     </author>
-    <id>http://example.com/2026/02/19/Home/</id>
-    <link href="http://example.com/2026/02/19/Home/"/>
+    <id>https://www.animebluray.wiki/2026/02/19/Home/</id>
+    <link href="https://www.animebluray.wiki/2026/02/19/Home/"/>
     <published>2026-02-19T13:10:00.000Z</published>
     <summary>
       <![CDATA[<meta name="referrer" content="no-referrer">
