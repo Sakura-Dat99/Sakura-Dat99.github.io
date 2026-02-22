@@ -7,8 +7,8 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -17,15 +17,16 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
     <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="圆盘档案">
 <meta property="og:url" content="http://example.com/archives/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="圆盘档案">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Sakura Chan">
 <meta name="twitter:card" content="summary">
 
 
@@ -35,7 +36,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | Hexo</title>
+<title>归档 | 圆盘档案</title>
   
 
 
@@ -47,12 +48,14 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
 <script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
 
   
 
 
 
+  <script src="/js/third-party/fancybox.js" defer></script>
 
 
 
@@ -65,6 +68,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<link rel="alternate" href="/atom.xml" title="圆盘档案" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -82,9 +86,10 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">圆盘档案</h1>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Anime Blu-ray List</p>
   </div>
 
   <div class="site-nav-right">
@@ -122,20 +127,158 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+    <img class="site-author-image" itemprop="image" alt="Sakura Chan"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Sakura Chan</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/73501678" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;73501678" rel="noopener me" target="_blank"><i class="fa fa-television fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://yuc.wiki/" title="Yuc List → https:&#x2F;&#x2F;yuc.wiki" rel="noopener me" target="_blank"><i class="fa fa-user fa-fw"></i>Yuc List</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+<div class="yuc-sidebar-nav">    
+    <details class="year-details" open>
+        <summary class="year-summary">2026 年度导航</summary>
+        <div class="season-list">
+            <a href="/202401/index" class="season-item winter">
+                <span class="s-en">WINTER</span><span class="s-cn">1月</span>
+            </a>
+            <a href="/202401/index" class="season-item movie">
+                <span class="s-en">MOVIE</span><span class="s-cn">剧场版</span>
+            </a>     
+        </div>
+    </details>
+    <details class="year-details">
+        <summary class="year-summary">2025 年度导航</summary>
+        <div class="season-list">
+            <a href="/202401/index" class="season-item winter">
+                <span class="s-en">WINTER</span><span class="s-cn">1月</span>
+            </a>
+            <a href="/202401/index" class="season-item spring">
+                <span class="s-en">SPRING</span><span class="s-cn">4月</span>
+            </a>
+            <a href="/202401/index" class="season-item summer">
+                <span class="s-en">SUMMER</span><span class="s-cn">7月</span>
+            </a>
+            <a href="/202401/index" class="season-item autumn">
+                <span class="s-en">AUTUMN</span><span class="s-cn">10月</span>
+            </a>
+            <a href="/202401/index" class="season-item movie">
+                <span class="s-en">MOVIE</span><span class="s-cn">剧场版</span>
+            </a>
+        </div>
+    </details>
+    <details class="year-details">
+        <summary class="year-summary">2024 年度导航</summary>
+        <div class="season-list">
+            <a href="/202401/index" class="season-item winter">
+                <span class="s-en">WINTER</span><span class="s-cn">1月</span>
+            </a>
+            <a href="/anime/2024/Q2/" class="season-item spring">
+                <span class="s-en">SPRING</span><span class="s-cn">4月</span>
+            </a>
+            <a href="/anime/2024/Q3/" class="season-item summer">
+                <span class="s-en">SUMMER</span><span class="s-cn">7月</span>
+            </a>
+            <a href="/anime/2024/Q4/" class="season-item autumn">
+                <span class="s-en">AUTUMN</span><span class="s-cn">10月</span>
+            </a>
+            <a href="/202401/index" class="season-item movie">
+                <span class="s-en">MOVIE</span><span class="s-cn">剧场版</span>
+            </a>
+        </div>
+    </details>
+    <details class="year-details">
+        <summary class="year-summary">2023 年度导航</summary>
+        <div class="season-list">
+            <a href="/anime/2023/Q1/" class="season-item winter">
+                <span class="s-en">WINTER</span><span class="s-cn">1月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item spring">
+                <span class="s-en">SPRING</span><span class="s-cn">4月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item summer">
+                <span class="s-en">SUMMER</span><span class="s-cn">7月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item autumn">
+                <span class="s-en">AUTUMN</span><span class="s-cn">10月</span>
+            </a>
+            <a href="/202401/index" class="season-item movie">
+                <span class="s-en">MOVIE</span><span class="s-cn">剧场版</span>
+            </a>
+        </div>
+    </details>
+    <details class="year-details">
+        <summary class="year-summary">2022 年度导航</summary>
+        <div class="season-list">
+            <a href="/anime/2023/Q1/" class="season-item winter">
+                <span class="s-en">WINTER</span><span class="s-cn">1月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item spring">
+                <span class="s-en">SPRING</span><span class="s-cn">4月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item summer">
+                <span class="s-en">SUMMER</span><span class="s-cn">7月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item autumn">
+                <span class="s-en">AUTUMN</span><span class="s-cn">10月</span>
+            </a>
+            <a href="/202401/index" class="season-item movie">
+                <span class="s-en">MOVIE</span><span class="s-cn">剧场版</span>
+            </a>
+        </div>
+    </details>
+    <details class="year-details">
+        <summary class="year-summary">2021 年度导航</summary>
+        <div class="season-list">
+            <a href="/anime/2023/Q1/" class="season-item winter">
+                <span class="s-en">WINTER</span><span class="s-cn">1月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item spring">
+                <span class="s-en">SPRING</span><span class="s-cn">4月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item summer">
+                <span class="s-en">SUMMER</span><span class="s-cn">7月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item autumn">
+                <span class="s-en">AUTUMN</span><span class="s-cn">10月</span>
+            </a>
+            <a href="/202401/index" class="season-item movie">
+                <span class="s-en">MOVIE</span><span class="s-cn">剧场版</span>
+            </a>
+        </div>
+    </details>
+    <details class="year-details">
+        <summary class="year-summary">2020 年度导航</summary>
+        <div class="season-list">
+            <a href="/anime/2023/Q1/" class="season-item winter">
+                <span class="s-en">WINTER</span><span class="s-cn">1月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item spring">
+                <span class="s-en">SPRING</span><span class="s-cn">4月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item summer">
+                <span class="s-en">SUMMER</span><span class="s-cn">7月</span>
+            </a>
+            <a href="/anime/2023/Q1/" class="season-item autumn">
+                <span class="s-en">AUTUMN</span><span class="s-cn">10月</span>
+            </a>
+            <a href="/202401/index" class="season-item movie">
+                <span class="s-en">MOVIE</span><span class="s-cn">剧场版</span>
+            </a>
+        </div>
+    </details>
 </div>
-
         </div>
       </div>
     </div>
@@ -167,15 +310,15 @@
     <header class="post-header">
       <div class="post-meta-container">
         <time itemprop="dateCreated"
-              datetime="2026-01-11T20:21:05+08:00"
-              content="2026-01-11">
-          01-11
+              datetime="2026-02-19T21:10:00+08:00"
+              content="2026-02-19">
+          02-19
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2026/01/11/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
+          <a class="post-title-link" href="/2026/02/19/Home/" itemprop="url">
+            <span itemprop="name">圆盘档案<br>Anime Blu-ray List<br></span>
           </a>
       </div>
 
@@ -202,7 +345,7 @@
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">John Doe</span>
+    <span class="author" itemprop="copyrightHolder">Sakura Chan</span>
   </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
