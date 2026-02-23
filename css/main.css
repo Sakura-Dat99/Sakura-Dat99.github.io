@@ -1385,7 +1385,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff2985;
+    background: #c2a1bb;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2833,7 +2833,9 @@ header.header {
     padding: 10px 12px;
   }
 }
-/*首页*/
+/* ============================================================
+   首页
+   ============================================================ */
 /* 1. 大容器 */
 .yuc-container {
   display: flex !important;
@@ -2909,7 +2911,6 @@ header.header {
   text-decoration: none !important;
   box-shadow: none !important;
 }
-/*文章页*/
 /* ============================================================
    yuc 风格详情页 - 换行标题版
    ============================================================ */
@@ -2982,13 +2983,19 @@ header.header {
   flex-shrink: 0;
 }
 .tag-manga {
-  background: #56a36c;
+  background: #007979;
 }
 .tag-original {
-  background: #d32f2f;
+  background: #ce0000;
 }
 .tag-novel {
-  background: #1e90ff;
+  background: #ea7500;
+}
+.tag-game {
+  background: #0072e3;
+}
+.tag-other {
+  background: #609;
 }
 /* 主体：文字区域 + 右侧按钮 */
 .anime-body {
@@ -3384,6 +3391,9 @@ header.header {
   border-bottom: none !important;
   text-decoration: none !important;
 }
+/* ============================================================
+   强制恢复版权声明区域显示
+   ============================================================ */
 /* 强制恢复版权声明区域显示 (修正了拼写错误) */
 .post-copyright {
   display: block !important;
@@ -3405,7 +3415,9 @@ header.header {
   text-decoration: underline !important;
   border-bottom: none !important;
 }
-/* 强制移动返回顶部按钮到右下角 */
+/* ============================================================
+   强制移动返回顶部按钮到右下角
+   ============================================================ */
 .back-to-top {
   left: auto !important; /* 取消左侧定位 */
   right: 30px !important; /* 强制靠右 30px */
@@ -3428,6 +3440,9 @@ header.header {
     bottom: 20px !important;
   }
 }
+/* ============================================================
+   强制社交链接分行显示
+   ============================================================ */
 /* 1. 强制社交链接分行显示 */
 .links-of-author-item {
   display: block !important; /* 关键：由并排改为块级，自动换行 */
@@ -3457,6 +3472,9 @@ header.header {
 .links-of-author-item a[title*="RSS"] {
   color: #ff8c00 !important; /* RSS 经典橙 */
 }
+/* ============================================================
+   只要链接 href 是空的或者只有个 #，就禁用点击
+   ============================================================ */
 /* 只要链接 href 是空的或者只有个 #，就禁用点击 */
 .season-card[href="#"],
 .season-card[href="javascript:void(0);"],
@@ -3464,6 +3482,9 @@ header.header {
   pointer-events: none;
   cursor: not-allowed; /* 鼠标变成禁止符号 */
 }
+/* ============================================================
+   手机端适配
+   ============================================================ */
 /* 手机端适配 (屏幕宽度小于 768px 时生效) */
 @media screen and (max-width: 768px) {
   .yuc-container {
@@ -3628,5 +3649,20 @@ header.header {
   }
   .release-card a[href="#"] {
     pointer-events: none !important;
+  }
+}
+/* ============================================================
+   禁用 href 为 "#" 的标题点击效果，防止回顶
+   ============================================================ */
+/* 核心修复：彻底禁用 href 为 "#" 的标题点击效果，防止回顶 */
+.release-cards-container .release-card a.release-title[href="#"] {
+  pointer-events: none !important; /* 核心：让点击穿透，不触发任何浏览器行为 */
+  cursor: default !important; /* 鼠标形状保持普通，不变成小手 */
+}
+/* 针对手机端的双重保险（之前虽然写过，建议这里统一一下） */
+@media screen and (max-width: 768px) {
+  .release-cards-container .release-card a.release-title[href="#"] {
+    pointer-events: none !important;
+    -webkit-tap-highlight-color: transparent !important; /* 移除手机点击时的蓝色高亮阴影 */
   }
 }
