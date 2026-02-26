@@ -1385,7 +1385,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #7073f2;
+    background: #ebff74;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2922,8 +2922,11 @@ header.header {
   margin-bottom: 40px;
   background: #eee;
   border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
   align-items: flex-start;
+/* --- 新增代码 --- */
+  width: fit-content; /* 关键：让背景宽度根据内容自动收缩 */
+  margin-left: auto; /* 配合这两行可以实现整体居中（可选） */
+  margin-right: auto;
 }
 /* 左侧海报 */
 .anime-media {
@@ -2939,17 +2942,20 @@ header.header {
 }
 /* 右侧内容区 */
 .anime-content {
-  flex: 1;
+  width: 800px; /* 设定一个固定宽度（根据你的页面总宽调整，建议在 700-750px 之间） */
+  flex-shrink: 0; /* 禁止缩小 */
   display: flex;
   flex-direction: column;
 }
 /* 黑色标题栏 */
 .anime-header {
   display: flex;
+  width: 100%; /* 强制填满上面设定的 710px */
+  box-sizing: border-box; /* 防止 padding 撑破宽度 */
   background: #333;
   color: #fff;
   margin-bottom: 15px;
-  align-items: stretch; /* 确保标签拉伸填满高度 */
+  align-items: stretch;
 }
 /* 标题容器：改为垂直排列实现换行 */
 .anime-title-group {
@@ -3145,40 +3151,35 @@ header.header {
   width: 130px;
   margin: 0 auto;
 }
-/* 修复：确保蓝框容器的起点就是红线的位置 */
+/* 修复：确保容器宽度与标题栏一致 */
 .anime-info-text-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-/* 修改：由 flex-start 改为 stretch，让容器填满宽度 */
-  align-items: stretch;
+  width: 100% !important; /* 这里的 100% 会参考 .anime-content 的 710px */
+  max-width: 100% !important;
+  overflow: hidden;
 }
 /* ============================================================
    左右滑动轮播效果 - 彻底解决溢出
    ============================================================ */
 /* 强制限制父级区域，防止被子元素撑大 */
 .anime-info-text-area {
-  overflow: hidden !important;
+  width: 100% !important; /* 这里的 100% 会参考 .anime-content 的 710px */
   max-width: 100% !important;
-  width: 0; /* 这里的 0 配合 flex: 1 是 CSS 技巧，防止 flex 子项溢出 */
-  flex: 1;
+  overflow: hidden;
 }
 /* 1. 包装层：必须等于蓝框宽度 */
 .release-cards-wrapper {
-  position: relative;
-  display: flex !important;
-  align-items: center;
   width: 100% !important;
   max-width: 100% !important;
-  overflow: hidden !important;
+  display: flex !important; /* 开启 flex 让按钮和视口并排 */
+  align-items: center !important; /* 垂直居中对齐箭头 */
+  position: relative; /* 为内部定位做准备 */
 }
 /* 2. 视口：允许横向溢出但隐藏滚动条 */
 .release-cards-viewport {
-  flex: 1;
+  flex: 1; /* 自动填满左右箭头中间的区域 */
   overflow-x: auto !important;
   overflow-y: hidden !important;
   display: block !important;
-  width: 100%;
   scroll-behavior: smooth;
   scrollbar-width: none !important;
 }
@@ -3204,15 +3205,20 @@ header.header {
   width: auto !important;
   margin: 0 auto !important;
 }
-/* 5. 基础控件 */
+/* 3. 左右箭头按钮微调 */
 .scroll-btn {
   background: transparent;
   border: none;
   font-size: 24px;
   cursor: pointer;
   color: #ccc;
-  flex-shrink: 0;
+  flex-shrink: 0; /* 防止按钮被挤压 */
   z-index: 5;
+  padding: 0 5px; /* 给箭头一点点击区域 */
+  transition: color 0.2s;
+}
+.scroll-btn:hover {
+  color: #ff6b6b; /* 悬停时变色，更有交互感 */
 }
 .release-card {
   flex-shrink: 0 !important;
